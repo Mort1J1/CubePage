@@ -1,0 +1,22 @@
+.aboutMe {
+  background: radial-gradient(rgba(96, 86, 95, 0.414), rgba(255, 255, 255, 0.223), rgba(86, 86, 86, 0.265));
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  width: auto;
+  padding: 3%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 700px) {
+  .aboutMe {
+      width: 80vw;
+  }
+}

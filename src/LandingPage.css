@@ -1,0 +1,51 @@
+.button-container-landing {
+    position: absolute;
+    top: 50%;        /* Center vertically */
+    left: 50%;       /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for proper centering */
+    width: 50vw;     /* Set container width */
+    height: 50vh;    /* Set container height */
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;      /* Center content vertically */
+    flex-direction: row;   /* Align items in rows */
+    border-radius: 15px;      /* Smooth the corners */
+}
+
+.button-container-landing button {
+    width: 80px;   /* Set a width for the buttons */
+    height: 60px;   /* Set a height for the buttons */
+    margin: 10px;   /* Add some spacing between buttons */
+    border: none;   /* Remove the default border */
+    border-radius: 10px;   /* Smooth the corners */
+    background: radial-gradient(circle, #f0f0f0, #b0b0b0);  /* Radial gradient with lighter contrast */
+    color: #333;    /* Dark text for contrast */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;  /* Change cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Add a slight shadow for depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons */
+.button-container-landing button:hover {
+    background: radial-gradient(circle, #ffffff, #d9d9d9);  /* Brighten the button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Intensify shadow on hover */
+}
+
+.button-container-landing button:active {
+    box-shadow: none;  /* Remove shadow on click to create a "pressed" effect */
+}
+
+.title-landing {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;  /* Centers the text horizontally */
+    padding-top: 100px;      /* Ensures proper centering */
+
+
+    /* Add shadow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Adds a shadow with a slight blur */
+    
+
+}

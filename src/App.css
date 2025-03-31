@@ -1,0 +1,55 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: background-image 1.5s ease-in-out;
+}
+
+:root {
+  --games-bg-light: radial-gradient(circle, rgb(142, 142, 170) 0%, rgb(101, 103, 116) 0%, rgba(173, 169, 221, 0.892) 100%);
+  --games-bg-dark: radial-gradient(circle, rgb(158, 13, 215) 0%, rgb(219, 89, 8) 35%, rgba(232, 119, 74, 0.936) 73%, rgba(19,18,16,1) 100%);
+}
+
+/* Ensure this rule is applied globally */
+html, body {
+  overflow: hidden;
+  height: 100%; /* Ensure full viewport height */
+  transition: background-image 1.5s ease-in-out;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.soundButton{
+  opacity: 1; /* Initial opacity */
+
+  transition: opacity 1.8s ease; /* Smooth transition for opacity change */
+
+}
+
+.soundButtonHider {
+  opacity: 0; /* Initial opacity */
+  pointer-events: none; /* Make all elements uninteractable */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}

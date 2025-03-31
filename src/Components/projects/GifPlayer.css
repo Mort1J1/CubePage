@@ -1,0 +1,42 @@
+.gif-player {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    padding-bottom: 0%;
+    height: 200px;
+    /* height: auto; */
+    background-color: white;
+    border-radius: 10%;
+    cursor: pointer;
+  }
+  
+  .gif-image {
+    display: block;
+    width: 100%; /* Adjust to fit your container */
+    height: auto;
+  }
+  
+  .gif-image.paused {
+
+    
+    /* If you need a specific style when paused (e.g., show a static image), apply it here */
+  }
+  
+  .play-pause-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .play-pause-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  

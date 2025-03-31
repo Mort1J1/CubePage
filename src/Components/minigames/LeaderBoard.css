@@ -1,0 +1,60 @@
+.leaderboard-container {
+    width: 100%;
+    max-width: 600px; /* Optional: to restrict max width */
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaderboard-header {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .leaderboard-list {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    overflow-y: scroll;
+    margin: 0;
+  }
+  
+  .leaderboard-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .leaderboard-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+  }
+  
+  .leaderboard-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .leaderboard-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent background */
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .leaderboard-item:nth-child(even) {
+    background-color: rgba(240, 240, 240, 0.5); /* Slightly darker for even items */
+  }
+  
+  .leaderboard-item span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+  

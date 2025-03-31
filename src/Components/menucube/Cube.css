@@ -1,0 +1,94 @@
+/* styles/Cube.module.css */
+
+.text {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: white;
+  }
+
+  .category {
+
+    position: absolute;
+    font-size: 20px;
+    left: 50%;
+    top: 80%;
+    width: 45vw;
+    height: 10vh;
+    
+    transform: translateX(-50%);
+    font-weight: bold; /* Make text bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow to the text */
+  
+    display: flex;
+    flex-direction: row; /* Arrange child elements in a column */
+    justify-content: center; /* Center content vertically within the .category element */
+    align-items: center; /* Center content horizontally within the .category element */
+    text-align: center; /* Center text within the element */
+    /* Ensure the element has enough height to contain the content */
+    z-index: 9999;
+  
+  }
+
+
+  
+  .lcat, .rcat {
+    font-size: 25px; /* Smaller font size for left and right categories */
+    opacity: 0.7; /* Reduced opacity for left and right categories */
+    margin: 0 20px; /* Space between categories */
+    position: relative; /* Required for absolute positioning of the gradient */
+    width: 30px;
+    height: 30px;
+    /* border-radius: 5px, 5px;
+    background: linear-gradient(rgba(128, 128, 128, 0.105), rgba(255, 255, 255, 0.356), rgba(128, 128, 128, 0.121)); */
+    font-weight: 900;
+  }
+
+  .lcat{
+    right: 60%
+  }
+  
+  .rcat{
+    left: 60%
+  }
+
+  @media (max-width: 800px) {
+    .lcat {
+      right: 70%;
+    }
+  
+    .rcat {
+      left: 70%;
+    }
+  }
+  
+
+  .rcat::before {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.147), transparent); /* Gradient effect for the right side */
+  }
+  
+  .maincat {
+    width: 250px;
+    border-radius: 5px; /* You can adjust the radius as needed */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.092), rgba(128, 128, 128, 0.262), rgba(255, 255, 255, 0.24));
+    font-size: 40px; /* Larger font size for the main category */
+    opacity: 1; /* Full opacity for the main category */
+    position: absolute; /* Position absolutely within the .category container */
+    z-index: 9999;
+    transition: opacity 1.5s ease-in-out; /* Smooth transition on opacity */
+    cursor: pointer;
+}
+
+.maincatHidden {
+  width: 250px;
+  border-radius: 5px; /* You can adjust the radius as needed */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.092), rgba(128, 128, 128, 0.262), rgba(255, 255, 255, 0.24));
+  font-size: 40px; /* Larger font size for the main category */
+  opacity: 1; /* Full opacity for the main category */
+  position: absolute; /* Position absolutely within the .category container */
+  z-index: 9999;
+    opacity: 0; /* Fully transparent */
+    pointer-events: none; /* Non-interactable */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition on opacity */
+
+}
+  

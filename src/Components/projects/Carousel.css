@@ -1,0 +1,35 @@
+.carousel-container {
+    padding-top: 20px;
+    width: 100vw; /* Adjust based on your layout */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: calc(24 * 10vw);
+    animation: scroll 30s linear infinite;
+    background-image: linear-gradient(grey, white, grey);
+  }
+  
+  .carousel-item {
+    width: 10vw;
+    flex-shrink: 0;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Keyframes for the scroll animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

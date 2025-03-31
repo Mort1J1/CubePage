@@ -1,0 +1,74 @@
+
+.position-wrapper {
+
+    position: absolute;
+    /* width: 100vw;
+    height: 100vh; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+.GamesWrapper {
+        
+    width: 60vw;
+    height: auto;
+    border-radius: 2%;
+    background: radial-gradient(rgba(81, 80, 80, 0.576), rgba(255, 255, 255, 0.431), rgba(102, 102, 102, 0.145));
+}
+
+
+.space-time-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 60vw;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .start-screen, .too-early-screen, .result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .start-button, .submit-button, .play-again-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #916ff7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .name-input {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+.ButtonWrapper {
+    width: 90%;
+    height: 60%;
+    position: relative;
+    left: 5%;
+    top: 20%;
+    /* margin-top: 10vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,147 @@
+/* src/Projects.css */
+
+/* src/App.css */
+.App {
+  text-align: right; /* Align all content to the right */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Align children to the right */
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+.projects-list {
+  position: relative;
+  /* height: 100vh; */
+  width: auto;
+  text-align: center;
+  align-content: space-around;
+}
+
+.project-container {
+  transition: opacity 0.3s ease-in-out;
+  background-image: radial-gradient( rgba(128, 128, 128, 0.51), rgba(0, 0, 0, 0.504));
+  border-radius: 4px;
+  /* margin-top: 5%; */
+  /* padding: 10px; */
+}
+
+.project {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+}
+
+.project.active {
+  /* position: absolute;
+  transform: translate(-50%, -50%); */
+  z-index: 9;
+
+}
+
+.project-title {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-size: 24px;
+  z-index: 99;
+}
+
+
+.project-name:hover {
+  color: darkgrey;
+}
+
+.project-name-active {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  z-index: 9999;
+  font-size: medium;
+  color: white; /* Text color */
+  background: radial-gradient(circle, #444444, #888888); /* Radial gradient background */
+  border: 2px solid gold; /* Gold border */
+  border-radius: 5px;
+  padding: 10px; /* Add some padding for better appearance */
+  box-shadow: 0 0 5px black; /* Black shadow for text */
+  text-shadow: 1px 1px 2px black; /* Black text shadow for better readability */
+  font-weight: bold; /* Make text bold for emphasis */
+}
+.project-title.project.active {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-size: 24px;
+  z-index: 99;
+}
+
+.project-title:hover{
+  color: aliceblue;
+  /* transform: rotateY(-40deg); */
+}
+
+
+
+.project-description-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start, as padding will push them down */
+  background: rgba(0, 0, 0, 0.799);
+  z-index: 2;
+  cursor: default;
+  overflow: auto; /* Use 'auto' to only show scrollbars when needed */
+  touch-action: pan-y; /* Allow vertical panning */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+  padding-top: 100px; /* Push content down by 10% of container height */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  color: white;
+
+}
+
+/* Ensure compatibility with some mobile browsers */
+.project-description-container {
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling */
+}
+
+.project-description {
+  text-align: center;
+  font-size: 18px;
+  color: white; /* Optional: make text more visible */
+}
+
+.project-name {
+  color: white;
+
+  position: relative;
+  font-weight: bolder;
+  z-index: 10;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: xxx-large;
+  border-bottom: 2px solid #ffffff; /* Line thickness and color */
+
+  padding-bottom: 10px; /* Padding between text and border */
+
+  /* text-shadow: -2px -2px 2px rgb(173, 178, 197); */
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-content {
+  font-size: large;
+  padding-top: 20px;
+  line-height: 30px; /* Sets the line height to 24 pixels */
+  padding-left: 5vw; /* Adjust the value as needed */
+  padding-right: 5vw; /* Adjust the value as needed */
+}
+
+.image-content {
+  max-width: 20vw;
+}

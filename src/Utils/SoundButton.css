@@ -1,0 +1,39 @@
+/* SoundButton.css */
+
+.sound-button-container {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    width: auto;
+    font-size: larger;
+
+  }  
+
+  .sound-button {
+    width: 35px;
+    height: 35px;
+    background-image: url('../Assets/SoundIcon.webp'); /* Absolute path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .music-button {
+    width: 35px;
+    height: 35px;
+    background-image: url('../Assets/MusicIcon.png'); /* Absolute path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  /* .volume-slider {
+    margin-right: 10px;
+  }
+   */
