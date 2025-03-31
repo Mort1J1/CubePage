@@ -10,3 +10,5 @@ Dockerfile.backend
 .env.development
 .env.test
 build
+.DS_Store
+
