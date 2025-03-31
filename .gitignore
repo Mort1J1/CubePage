@@ -11,4 +11,4 @@ Dockerfile.backend
 .env.test
 build
 .DS_Store
-
+.github
