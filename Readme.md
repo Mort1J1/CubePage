@@ -1,24 +1,31 @@
-# 3D Cube Navigation
+# CV Nettside
 
-A React-based navigation system where a 3D cube serves as the primary interface. Users can rotate the cube and click on its faces to navigate to different pages.
+A modern, interactive portfolio website featuring a 3D cube navigation system. Built with React and Three.js, this website offers an engaging user experience with smooth animations and responsive design.
 
 ## Features
 - Interactive 3D cube navigation
-- Clickable faces that link to different pages
-- Smooth animations for rotation and transitions
-- Built with React, Three.js and Spring
+- Responsive design with Chakra UI
+- Smooth animations using Framer Motion and React Spring
+- Modern UI components with styled-components
+- Docker support for containerization
 
 ## Tech Stack
-- React (created with `create-react-app`)
-- Three.js for 3D rendering
-- Styled-components or CSS modules for styling (adjust based on your implementation)
+- React 18
+- Three.js with React Three Fiber
+- Chakra UI for component library
+- Framer Motion for animations
+- React Spring for physics-based animations
+- Styled Components for styling
+- Howler.js for audio
+- Axios for API calls
+- Docker for containerization
 
 ## Installation & Development
 
 1. Clone the repository:
    ```sh
    git clone https://github.com/Mort1J1/CubePage.git
-   cd 3d-cube-navigation
+   cd CubePage
    ```
 
 2. Install dependencies:
@@ -33,29 +40,33 @@ A React-based navigation system where a 3D cube serves as the primary interface.
 
 4. Open the project in your browser:
    ```
-http://localhost:3000
+   http://localhost:3000
    ```
 
 ## 📖 Usage
-- Rotate the cube using mouse or touch gestures.
-- Click on a face to navigate to a corresponding page.
+- Navigate through the portfolio using the 3D cube interface
+- Interact with the cube using mouse or touch gestures
+- Click on cube faces to access different sections of the portfolio
+- Experience smooth transitions and animations throughout the site
 
 ## 🏗 Build for Production
-To create an optimized production build, run:
+To create an optimized production build:
    ```sh
    npm run build
    ```
 
-## 🔧 Customization
-- Modify cube faces and navigation links in `src/components/Cube.js` (or equivalent file).
-- Adjust styles in `src/styles/` (if applicable).
+To serve the production build:
+   ```sh
+   npm start
+   ```
 
-## 🤝 Contributing
+## Project Structure
+- `/src` - Source code
+- `/public` - Static assets
+
+## Contributing
 Feel free to fork, open issues, or submit pull requests to improve the project!
 
-## 📜 License
+## License
 This project is licensed under the MIT License.
-
----
-Made with ❤️ using React & Three.js
 
