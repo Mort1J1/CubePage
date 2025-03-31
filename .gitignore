@@ -9,3 +9,4 @@ Dockerfile.backend
 .env.production.local
 .env.development
 .env.test
+build
