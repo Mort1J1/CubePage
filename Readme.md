@@ -1,4 +1,4 @@
-# CV Nettside
+# Cube Website
 
 A modern, interactive portfolio website featuring a 3D cube navigation system. Built with React and Three.js, this website offers an engaging user experience with smooth animations and responsive design.
 
