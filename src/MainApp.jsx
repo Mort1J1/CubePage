@@ -7,27 +7,14 @@ import HomePage from './Components/home/HomePage';
 import ProjectsList from './Components/projects/ProjectList';
 import GameMenu from './Components/minigames/GameMenu';
 import AboutMe from './Components/aboutMe/AboutMe';
- 
-import config from './config';
 import SoundButton from './Utils/SoundButton';
 import AudioVisualizerClassic from './Utils/AudioVisualizerClassic';
-import { SoundContext } from './Utils/SoundProvider';
-import { MenuProvider, MenuContext } from './Utils/MenuProvider';
-import ScrollingBackground from './Components/aboutMe/ScrollingBackground';
 
 import { useMediaQuery } from "@chakra-ui/react";
 
 const MainApp = ({currentCategory, colorMode, toggleColorMode, handleCurrentCategoryChange, renderComponent, weather}) => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const [isLoading, setIsLoading] = useState(false);
-  
-  const { 
-    menuCubeOn,
-    setMenuCubeOn,
-    menuArrowsOn,
-    setMenuArrowsOn,
-    menuButtonOn,
-    setMenuButtonOn, } = useContext(MenuContext);
 
   return (
     <Box className="App" position="relative" minH="100vh" transitionProperty="background-image" transitionDuration="200ms" transitionTimingFunction="ease-in-out">

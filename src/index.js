@@ -8,11 +8,6 @@ import { ChakraProvider, ColorModeScript} from '@chakra-ui/react';
 import { SoundProvider } from './Utils/SoundProvider';
 import { MenuProvider } from './Utils/MenuProvider';
 
-// Redirect HTTP to HTTPS
-// if (window.location.protocol === 'http:') {
-//   window.location.href = `https://${window.location.host}${window.location.pathname}${window.location.search}`;
-// }
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <MenuProvider>

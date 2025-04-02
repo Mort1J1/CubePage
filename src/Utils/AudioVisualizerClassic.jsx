@@ -9,11 +9,6 @@ const AudioVisualizer = () => {
 
   let angle = 0; // Initial angle for rotation
 
-
-//   useEffect(() => {
-//     // console.log(isPlaying, 'yolooooo')
-// }, [isPlaying]);
-
   useEffect(() => {
     let animationFrameId;
 
@@ -50,15 +45,6 @@ const AudioVisualizer = () => {
       const particleMaterials = [];
       const geometry = new THREE.BoxGeometry();
       const material = new THREE.MeshStandardMaterial({ color: 0x100c31 });
-
-    //   for (let i = 0; i < 50; i++) {
-    //     const cube = new THREE.Mesh(geometry, material);
-    //     cube.position.x = Math.random() * 30 - 15;
-    //     cube.position.y = Math.random() * 1 - 30;
-    //     cube.position.z = Math.random() * 30 - 15;
-    //     scene.add(cube);
-    //     cubes.push(cube);
-    //   }
 
     const gridSize = 4; // The number of cubes per row/column
     const spacing = 5; // The spacing between cubes
@@ -120,26 +106,14 @@ const AudioVisualizer = () => {
             
             // Scale the cube based on the data value
             cube.scale.y = data / 50 + 1;
-            // cube.scale.x = data / 100 + 1;
-            // cube.scale.z = data / 100 + 1;
-
-            // Change color based on the data value
-            // const colorValue = data / 255;
-            // cube.material.color.setHSL(colorValue, 1, 0.5);
 
             // Rotate the cube based on the data value
             cube.rotation.x += (data / 50000);
             cube.rotation.y += (data / 50000);
 
-            // Add a pulsating effect by modifying the position slightly
-            // console.log('naillo')
-            // if (isPlaying){
-
             cube.position.y += (data / 5000 * Math.cos(performance.now() / 50000 + index) * 1.5) * 2;
             cube.position.z += (data / 5000 * Math.cos(performance.now() / 50000 + index) * 1.5) * 2;
             cube.position.x += (Math.sin(performance.now() / 5000 + index) * 1.5)*.5;
-
-            // }
 
             // Trail effect
             const particleSystem = particles[index];
@@ -165,8 +139,8 @@ const AudioVisualizer = () => {
         //   camera.rotateY(.0001)
 
           
-    // Update the angle for rotation
-    angle += 0.001; // Adjust the speed of rotation here
+            // Update the angle for rotation
+            angle += 0.001; // Adjust the speed of rotation here
 
             // Calculate the new camera position
             const radius = 100; // Distance from the center of rotation

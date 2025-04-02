@@ -5,79 +5,14 @@ import { MenuProvider, MenuContext } from '../Utils/MenuProvider.jsx';
 
 
 const AudioVisualizer = () => {
-  const { isPlaying, volume, analyser } = useContext(SoundContext);
+  const { isPlaying, analyser } = useContext(SoundContext);
   const containerRef = useRef(null);
   const isPlayingRef = useRef(isPlaying); // Use a ref to track isPlaying
   const [isLoaded, setIsLoaded] = useState(false)
-  const { 
-    menuCubeOn,
-    setMenuCubeOn,
-    menuArrowsOn,
-    setMenuArrowsOn,
-    menuButtonOn,
-    setMenuButtonOn, } = useContext(MenuContext);
+  const { menuCubeOn } = useContext(MenuContext);
 
   let angle = 0; // Initial angle for rotation
   
-
-
-  const createCube = (cubes, scene) => {
-    
-    const material = new THREE.MeshStandardMaterial({ color: 0x100c31 });
-    
-    let space;
-    let geo;
-    let offset;
-    
-    if (menuCubeOn){
-      geo = new THREE.BoxGeometry();
-      offset = 70
-      space = 5
-    }
-    else{
-      geo = new THREE.BoxGeometry(2, 2, 2);
-      offset = 10
-      space = 20
-    }
-    
-    const geometry = geo
-
-    const gridSize = 4; // The number of cubes per row/column
-    const spacing = space; // The spacing between cubes
-    let opacity_particle = 19
-    
-    if (!isLoaded) {
-      setIsLoaded(true)
-    }
-
-    for (let x = 0; x < gridSize; x++) {
-        for (let y = 0; y < gridSize; y++) {
-          for (let z = 0; z < gridSize; z++) {
-            const cube = new THREE.Mesh(geometry, material);
-
-            // Calculate the position for each cube
-            cube.position.x = x * spacing - (gridSize * spacing) / 2 + offset;
-            cube.position.y = y * spacing - (gridSize * spacing) / 2;
-            cube.position.z = z * spacing - (gridSize * spacing) / 2;
-
-            scene.add(cube);
-            cubes.push(cube);
-
-            // Create particle materials for trails
-            const trailMaterial = new THREE.PointsMaterial({
-              color: 0xffffff,
-              size: 0.1,
-              opacity: 0.5,
-              transparent: true,
-              depthWrite: false,
-            });
-            
-
-          }
-        }
-      }
-  }
-
   const createCircle = (cubes, scene) => {
 
     const material = new THREE.MeshStandardMaterial({ color: 0x100c31 });

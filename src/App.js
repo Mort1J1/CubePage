@@ -1,28 +1,24 @@
 import MainApp from './MainApp';
-// src/App.js
 import './App.css'; // Ensure App.css does not override transitions
 import { useState, useEffect, useContext, useMediaQuery } from 'react';
 import axios from 'axios';
 import {Box, useColorMode, useToast, ColorModeScript} from '@chakra-ui/react';
-import PropTypes from 'prop-types';
 import theme from './theme';
 
 import config from './config';
 import { SoundContext } from './Utils/SoundProvider';
-import LandingPage from './LandingPage'
 import ErrorBoundary from './Utils/ErrorBoundary';
 
 
 
 function App() {
 
-  const {isSound, setIsSound, isPlaying} = useContext(SoundContext);
+  const {isPlaying} = useContext(SoundContext);
   const [currentCategory, setCurrentCategory] = useState('Menu');
   const [renderComponent, setRenderComponent] = useState(false);
   const [weather, setWeather] = useState(null);
   const {colorMode, toggleColorMode} = useColorMode();
   const [showVisualizer, setShowVisualizer] = useState(false);
-  const [landingPage, setLandingPage] = useState(true)
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
@@ -95,9 +91,5 @@ function App() {
     </>
   );
 }
-
-App.propTypes = {
-  // Add any props if needed
-};
 
 export default App;
